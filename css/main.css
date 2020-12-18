@@ -4,8 +4,7 @@ body {
   color: white;
   height: 100 vh;
   margin: 2px;
-  background: #212933;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Poppins',arial;
 }
 
 ul {
@@ -64,6 +63,20 @@ header nav ul a {
   display: none;
 }
 
+body {
+  height: 100vh;
+  margin: 0;
+  background: #212933;
+  color: #738BAA;
+  font-family: 'Russo One', sans-serif;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,6 +85,8 @@ header nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
 }
 
 .content .left {
@@ -114,7 +129,7 @@ header nav ul a {
   opacity: 0;
 }
 
-@media only screen and (min-width: 490px) {
+@media only screen and (min-width: 720px) {
   .content {
     display: -webkit-box;
     display: -ms-flexbox;
