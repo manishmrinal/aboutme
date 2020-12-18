@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manish Mrinal</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">Manish Mrinal</a>
+            <nav>
+                <ul>
+                    <li><a href="#">My Work</a> </li>
+                    <li><a href="#">My Work</a> </li>
+                    <li><a href="#">My Work</a> </li>
+                </ul>
+            </nav>
+        </header>      
+    
+    </div>
+
+
+      <div class="content">
+  
+          <div class="left">
+              <img src="images/dp.jpg" alt="yellow" class="yellow anim" data-delay="0s">
+              <p class="anim" data-delay=".5s">I have no clue what I'm doing here LOL!</p>
+              <p data-delay=".5s" class="squig anim" data-delay=".7s">>I have no clue what I'm doing here LOL!</p>
+  
+          </div>
+          <div class="right">
+              <div class="anim" data-delay="1s">
+                  <h2>Get Yellow</h2>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit</p>
+              </div>
+          </div>
+  
+        </div>
+
+    <div class="introduction">
+        <div class="content-lower">
+            <h1>Blalallalalalalal</h1>
+            <div class="meet">
+                <span>1</span>
+                <p>Mett Manish </p>
+
+            </div>
+            <img src="#" alt="intro">
+
+        </div>
+        <div class="content-design"></div>
+
+    </div>
+    <section class="featured">
+        <div class="left">
+            <div class="inner-transition2">
+                <p class="subtitle">Featured Project</p>
+                <a href="#" class="featured-title">Manishmrinal.com Redesign</a>
+                <p class="feturd-doc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sint nulla deserunt cumque nobis incidunt praesentium, ipsum beatae rem ipsa voluptates ipsam natus voluptatibus temporibus repellendus nemo, at quibusdam quis.</p>
+
+            </div>
+        </div>
+        <img class="right transition2" src="#">
+
+
+    </section>
+    <section class="skills">
+        <div class="skills-container">
+            <ul>
+                <li class="transitions2">
+                    <div class="icon-container one">
+                        <img src="#" alt="UI-UX ICOn">
+                    </div>
+                    <p class="skill-title">UI UX DESIGN</p>
+                    <p class="featured-desc skill-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos necessitatibus consequuntur beatae vitae iusto eius laudantium quae, libero neque dolorem repellendus, sapiente illo eos illum quod, impedit ducimus? Quod!</p>
+                </li>
+                <li class="transitions2">
+                    <div class="icon-container one">
+                        <img src="#" alt="UI-UX ICOn">
+                    </div>
+                    <p class="skill-title">UI UX DESIGN</p>
+                    <p class="featured-desc skill-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos necessitatibus consequuntur beatae vitae iusto eius laudantium quae, libero neque dolorem repellendus, sapiente illo eos illum quod, impedit ducimus? Quod!</p>
+                </li>
+                <li class="transitions2">
+                    <div class="icon-container one">
+                        <img src="#" alt="UI-UX ICOn">
+                    </div>
+                    <p class="skill-title">UI UX DESIGN</p>
+                    <p class="featured-desc skill-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos necessitatibus consequuntur beatae vitae iusto eius laudantium quae, libero neque dolorem repellendus, sapiente illo eos illum quod, impedit ducimus? Quod!</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <script>
+
+            
+const images = document.querySelectorAll('.anim');
+
+observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+        if(entry.intersectionRatio > 0) {
+            entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`;
+        }
+        else {
+            entry.target.style.animation = 'none';
+        }
+    })
+
+})
+
+images.forEach(image => {
+    observer.observe(image)
+})
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
