@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 body {
+  font-family: 'Russo One', sans-serif;
   background: #212933;
   color: white;
-  height: 100 vh;
+  height: 150 vh;
   margin: 2px;
-  font-family: 'Poppins',arial;
 }
 
 ul {
@@ -18,7 +18,7 @@ a {
 }
 
 img {
-  width: 50%;
+  width: 100%;
 }
 
 .nav-container {
@@ -63,18 +63,66 @@ header nav ul a {
   display: none;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-  background: #212933;
-  color: #738BAA;
-  font-family: 'Russo One', sans-serif;
+.featured {
+  position: relative;
+  padding: 2em 1em;
+  text-align: center;
 }
 
-section {
-  width: 100%;
+.featured-title {
+  color: black;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: -.4em;
+  display: block;
+}
+
+.featured-desc {
+  color: white;
+  margin-bottom: 3em;
+  font-size: .85em;
+  line-height: 1.8em;
+  font-weight: 500;
+}
+
+.skills {
+  background: pink;
+  padding: 1em 1em 1em 1em;
+}
+
+.skills-container ul li {
+  background-color: deepskyblue;
+  padding: 2em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+.skills-container ul li .icon-container {
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   margin: 0 auto;
-  height: 100vh;
+}
+
+.skills-container ul li .icon-container.one {
+  width: 50px;
+}
+
+.skills-container ul li .icon-container.two {
+  width: 100px;
+}
+
+.skills-container ul li .icon-container.three {
+  width: 60px;
+}
+
+.skills-container ul li .skill-title {
+  font-weight: bold;
+}
+
+.skills-container ul li .featured-desc {
+  margin-bottom: 2em;
 }
 
 .content {
@@ -87,6 +135,7 @@ section {
           flex-direction: column;
   -ms-grid-columns: auto auto auto auto;
       grid-template-columns: auto auto auto auto;
+  margin-top: 2em;
 }
 
 .content .left {
@@ -141,6 +190,36 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .featured, .portfolio {
+    text-align: left;
+  }
+  .left, .portfolio-letf {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .right {
+    margin-left: 2em;
+    margin-top: 1 em;
+  }
+  .skills {
+    margin-top: -5em;
+    margin-bottom: -7em;
+    padding-top: 7em;
+  }
+  .skills-container ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+  }
+  .portfolio {
+    padding-top: 7em;
+  }
+  .portfolio-container img {
+    margin-left: 2 em;
   }
 }
 
