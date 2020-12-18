@@ -8,7 +8,9 @@ body{
     color: white;
     height: 100 vh;
     margin: 2px;
-    font-family: 'Poppins',arial;
+  
+    background: #212933;
+    font-family: 'Russo One', sans-serif;
 }
 
 ul{
@@ -72,16 +74,10 @@ header{
 body {
     height: 100vh;
     margin: 0;
-    background: #212933;
-    color: #738BAA;
-    font-family: 'Russo One', sans-serif;
+    
 }
 
-section {
-    width: 100%;
-    margin: 0 auto;
-    height: 100vh;
-}
+
 
 .content {
     display: flex;
@@ -130,7 +126,7 @@ section {
     opacity: 0;
 }
 
-@media only screen and (min-width:375px){
+@media only screen and (min-width:490){
 
     .content{
             display:flex;
