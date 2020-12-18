@@ -64,11 +64,6 @@ header nav ul a {
   display: none;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-}
-
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,8 +72,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
 }
 
 .content .left {
@@ -121,7 +114,7 @@ body {
   opacity: 0;
 }
 
-@media only screen and (min-width: 490) {
+@media only screen and (min-width: 490px) {
   .content {
     display: -webkit-box;
     display: -ms-flexbox;
