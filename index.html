@@ -9,19 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="nav-container">
-        <header>
-            <a href="index.html" class="logo">Manish Mrinal</a>
-            <nav>
-                <ul>
-                    <li><a href="#">My Work</a> </li>
-                    <li><a href="#">My Work</a> </li>
-                    <li><a href="#">My Work</a> </li>
-                </ul>
-            </nav>
-        </header>      
-    
-    </div>
+    <nav>
+        <div class ="logo">
+
+            <h4> Manish Mrinal</h4>
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Projects</a>
+            </li>
+            <li>
+                <a href="#">Work</a>
+            </li>
+
+        </ul>
+        <div class="burger">
+
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        </div>
+
+
+    </nav>
 
 
       <div class="content">
@@ -33,7 +52,7 @@
           </div>
           <div class="right">
               <div class="anim" data-delay="1s">
-                  <h2>Get Yellow</h2>
+                  <h2>Hello !! I am Manish Mrinal</h2>
                   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit</p>
               </div>
           </div>
@@ -118,7 +137,32 @@ images.forEach(image => {
     observer.observe(image)
 })
 
+const navSlide =() =>{
 
+    const burger = document.querySelector('.burger');
+    const nav=document.querySelector('.nav-links');
+    const navLinks=document.querySelectorAll('.nav-links li');
+    burger.addEventListener('click',()=>{
+        nav.classList.toggle('nav-active');
+    
+    navLinks.forEach((link,index)=>{
+        console.log(index);
+        if(link.style.animation){
+            link.style.animation=''
+        }
+        else{
+
+               link.style.animation=`navLinkFade 0.5s ease forwards ${index / 7 + 1 }s`;
+        }
+
+
+    });
+
+});
+
+}
+
+navSlide();
 
 
     </script>

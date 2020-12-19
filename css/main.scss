@@ -21,55 +21,69 @@ ul{
 
 }
 
-a {
-    text-decoration: none;
-}
+
 
 img {
     width: 100%;
 }
 
-.nav-container{
-
-    background:#6700EE;
-    a{
-        color: white;
-    }
-}
-
-header{
+nav{
 
     display: flex;
-    justify-content: space-between ;
-    padding: 2em;
 
-    .logo{
-        color: #00F7FF;
-        font-weight: bold;
-    }
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(245, 208, 2);
+
+}
+
+.logo{
     
-   
-    nav{
-        float : right;
-        ul{
+    color:black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
 
-            display: flex;
-            a {
-             display: block;
+.nav-links{
+    display:flex;
+    justify-content: space-around;
+    width: 20%;
+
+    li{
+        list-style: none;
+        padding: 0 1em;
+      
+    }
+    a{
         
-                 padding: 0 1em;
-            }
-        }
+        color:black;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 14px;
     }
-    
-}
-.social-header{
 
+
+
+}
+
+.burger div{
+
+    width: 25px;
+    height:5px;
+    margin: 5px;
+    background-color: black;
+}
+
+.burger{
+    cursor:pointer;
     display: none;
-
-
-
 }
+
+
+
 
 
 
@@ -100,13 +114,13 @@ header{
 
 
 .skills{
-    background: pink;
+    background: rgb(245, 208, 2);
     padding: 1em 1em 1em 1em ;
 }
 
 .skills-container ul li{
 
-    background-color:deepskyblue;
+    background-color:rgb(47, 173, 173);
     padding: 2em;
     border-radius: 1em;
     margin-bottom: 1em;
@@ -150,10 +164,11 @@ header{
 
 
 .content {
+    
     display: flex;
     flex-direction: column;
     grid-template-columns:  auto auto auto auto;
-    margin-top: 2em;
+    margin-top: 1em;
 
     .left {
         position: relative;
@@ -200,11 +215,67 @@ header{
     opacity: 0;
 }
 
+@media screen and (max-width:720px){
+
+    body{
+        overflow-x: hidden;
+       
+    }
+
+      
+        .nav-links{
+            
+            position: absolute;
+            right:0px;
+            height:90vh;
+            top:8vh;
+            background-color: rgb(245, 208, 2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+            z-index: +1;
+        
+        }
+        .nav-links li{
+            opacity: 0;
+        }
+
+        .burger{
+            display:block;
+        }
+
+
+
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+
+    from{
+        opacity:0;
+        transform: translateX((50px));
+
+    }
+    to{
+
+        opacity:1;
+        transform: translateX(0px);
+    }
+}
+
 @media only screen and (min-width:720px){
 
+
+    
     .content{
             display:flex;
             flex-direction: row;
+            z-index: -1;
 
     }
 
