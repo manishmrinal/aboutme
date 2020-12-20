@@ -325,4 +325,19 @@ nav {
     opacity: 1;
   }
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#30ff00));
+  background: linear-gradient(transparent, #30ff00);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#00c6ff));
+  background: linear-gradient(transparent, #00c6ff);
+}
 /*# sourceMappingURL=main.css.map */
