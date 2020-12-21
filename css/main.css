@@ -119,6 +119,7 @@ nav {
 
 .featured {
   position: relative;
+  margin-top: 10em;
   padding: 2em 1em;
   text-align: center;
 }
@@ -189,7 +190,7 @@ nav {
           flex-direction: column;
   -ms-grid-columns: auto auto auto auto;
       grid-template-columns: auto auto auto auto;
-  margin-top: 1em;
+  margin-top: 10em;
 }
 
 .content .left {
