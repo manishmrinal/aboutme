@@ -2,18 +2,33 @@
             
 const images = document.querySelectorAll('.anim');
 
-observer = new IntersectionObserver((entries) => {
+const options={
+    root:null,
+    threhold:0,
+    rootMargin: "700px"
+};
+
+observer = new IntersectionObserver((entries,observer) => {
 
     entries.forEach(entry => {
-        if(entry.intersectionRatio > 0) {
+
+        console.log(entry);
+
+        if(entry.isIntersecting){
             entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`;
         }
-        else {
+        else{
             entry.target.style.animation = 'none';
         }
+        // if(entry.intersectionRatio > 0) {
+        //     entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`;
+        // }
+        // else {
+        //     entry.target.style.animation = 'none';
+        // }
     })
 
-})
+},options);
 
 images.forEach(image => {
     observer.observe(image)
