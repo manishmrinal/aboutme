@@ -1,11 +1,12 @@
 
             
 const images = document.querySelectorAll('.anim');
+//const contents = document.querySelectorAll('.content');
 
 const options={
     root:null,
     threhold:0,
-    rootMargin: "700px"
+    rootMargin: "2000px"
 };
 
 observer = new IntersectionObserver((entries,observer) => {
